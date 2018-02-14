@@ -1,0 +1,12 @@
+{
+  "plateau": {
+    "width": 7,
+    "height": 7
+  },
+  "rovers": [
+    { "start": { "x": 1, "y": 2, "o": "N" }, "path": "LMLMMLMLMM" },
+    { "start": { "x": 3, "y": 3, "o": "E" }, "path": "MMRMMRMRRM" },
+    { "start": { "x": 0, "y": 0, "o": "E" }, "path": "MLMMM" },
+    { "start": { "x": 5, "y": 0, "o": "E" }, "path": "MMMMLMLMM" }
+  ]
+}
