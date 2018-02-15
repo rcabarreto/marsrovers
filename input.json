@@ -4,7 +4,8 @@
     "height": 5
   },
   "rovers": [
-    { "start": { "x": 0, "y": 0, "o": "E" }, "path": "LMMM" },
-    { "start": { "x": 5, "y": 0, "o": "E" }, "path": "LMLMMMMMRMMLM" }
+    { "start": { "x": 1, "y": 2, "o": "N" }, "path": "LMLMLMLMM" },
+    { "start": { "x": 3, "y": 3, "o": "E" }, "path": "MMRMMRMRRM" },
+    { "start": { "x": 1, "y": 0, "o": "N" }, "path": "MMMMM" }
   ]
 }

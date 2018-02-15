@@ -13,24 +13,22 @@ const marsRovers = [];
 
 program
   .version('1.0.0')
-  .option('-v, --visual', 'Visual mode')
-  .option('-d, --delay [time]', 'Time in miliseconds', 500)
+  .option('-g, --graphical', 'graphical mode')
+  .option('-d, --delay [time]', 'Time in milliseconds for the movement delay on graphical mode', 500)
   .option('-i, --input [file]', 'Name of the input file', 'input.json')
   .parse(process.argv);
 
 
 // make available to other modules
 global.moveDelay = program.delay;
-global.visualMode = !!(program.visual);
-
+global.visualMode = !!(program.graphical);
 
 fn.clearScreen();
-
 
 // load data from file
 let data = fn.loadJson(program.input);
 
-// if data is ok, run the programm
+// if data is ok, run the program
 if (fn.parseJsonData(data)) {
 
   console.log('Welcome to the Mars Rover program!');
@@ -38,14 +36,15 @@ if (fn.parseJsonData(data)) {
 
   let thePlateau = new Plateau('thePlateau', data.plateau.width, data.plateau.height);
 
-
   // FIRST CREATE ALL THE ROVERS ON THE PLATEAU
   _.each(data.rovers, function (rover, index) {
+
+    if (global.visualMode) sleep.msleep(global.moveDelay);
+
     marsRovers[index] = new Rover(index, rover.start.x, rover.start.y, rover.start.o, rover.path, thePlateau);
-    // currentRover.runPath();
   });
 
-  sleep.msleep(global.moveDelay);
+  if (global.visualMode) sleep.msleep(1000);
 
   // NOW WE CAN MOVE THE ROVERS
   _.each(data.rovers, function (rover, index) {
