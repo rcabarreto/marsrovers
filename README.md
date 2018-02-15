@@ -110,7 +110,7 @@ $ npm install
 
 On the root of the project, you'll find a file called **input.json**. This file stores all the information needed to run the application and this information is loaded from the file every time you run the program. 
 
-On the file you can configure the dimensions of the plateau (up to 8 by 8) and as many as 8 rovers.
+On the file you can configure the dimensions of the plateau (up to 8 by 8) and as many as 12 rovers.
 
 ```
 {
