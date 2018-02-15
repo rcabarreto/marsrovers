@@ -137,6 +137,12 @@ To see the rovers moving on the plateau, first make sure you are running your te
 $ ./runRover.js -g
 ```
 
+There's a cool test I wrote for 12 Rovers on a 8x8 plateau, to see it just run:
+
+```
+$ ./runRover.js -gi swarm.json
+```
+
 There are some more options, to list them just run:
 
 ```

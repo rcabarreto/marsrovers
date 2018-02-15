@@ -15,7 +15,7 @@ program
   .version('1.0.0')
   .option('-g, --graphical', 'graphical mode')
   .option('-d, --delay [time]', 'Time in milliseconds for the movement delay on graphical mode', 500)
-  .option('-i, --input [file]', 'Name of the input file', 'input.json')
+  .option('-f, --file [input file]', 'Name of the input file', 'input.json')
   .parse(process.argv);
 
 
@@ -26,7 +26,7 @@ global.visualMode = !!(program.graphical);
 fn.clearScreen();
 
 // load data from file
-let data = fn.loadJson(program.input);
+let data = fn.loadJson(program.file);
 
 // if data is ok, run the program
 if (fn.parseJsonData(data)) {
