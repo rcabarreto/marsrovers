@@ -136,3 +136,9 @@ To see the rovers moving on the plateau, first make sure you are running your te
 ```
 $ ./runRover.js -g
 ```
+
+There are some more options, to list them just run:
+
+```
+$ ./runRover.js -h
+```
