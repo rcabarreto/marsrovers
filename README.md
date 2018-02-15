@@ -101,7 +101,7 @@ v6.0.0
 First, download the project, then cd into the project and install dependencies.
 
 ```
-$ git glone https://github.com/rcabarreto/marsrovers.git marsrovers/
+$ git clone https://github.com/rcabarreto/marsrovers.git marsrovers/
 $ cd marsrovers/
 $ npm install
 ```
