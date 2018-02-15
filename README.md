@@ -66,3 +66,73 @@ Expected Output:
 1 3 N
 5 1 E
 ```
+
+## The Solution
+
+This is a simple solution for the Mars Rovers Challenge, and I chose Node because it's backend and because it's Javascript and I have been using it a lot lately.
+
+These instructions will get you a copy of the project up and running on your local machine for testing purposes.
+
+This solutions was written and tested on a Linux machine, and I also tested on a Mac but I never testes on Windows because I simply don't have a Windows computer. 
+
+### Prerequisites
+
+You need to have Node installed to run this project.
+
+```
+$ cd ~
+$ curl -sL https://deb.nodesource.com/setup_6.x -o nodesource_setup.sh
+$ sudo apt-get install nodejs
+```
+
+Check installation
+
+```
+$ node -v
+```
+
+```
+Output
+v6.0.0
+```
+
+### Installing
+
+First, download the project, then cd into the project and install dependencies.
+
+```
+$ git glone https://github.com/rcabarreto/marsrovers.git marsrovers/
+$ cd marsrovers/
+$ npm install
+```
+
+### Configuring
+
+On the root of the project, you'll find a file called **input.json**. This file stores all the information needed to run the application and this information is loaded from the file every time you run the program. 
+
+On the file you can configure the dimensions of the plateau (up to 8 by 8) and as many as 8 rovers.
+
+```
+{
+  "plateau": {
+    "width": 5,
+    "height": 5
+  },
+  "rovers": [
+    { "start": { "x": 1, "y": 2, "o": "N" }, "path": "LMLMLMLMM" },
+    { "start": { "x": 3, "y": 3, "o": "E" }, "path": "MMRMMRMRRM" }
+  ]
+}
+```
+
+To run a test in text mode, you can use the command:
+
+```
+$ ./runRover.js
+```
+
+To see the rovers moving on the plateau, first make sure you are running your terminal full screen or else it'll break, then use the command:
+
+```
+$ ./runRover.js -g
+```
