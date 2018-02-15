@@ -33,8 +33,8 @@ let data = fn.loadJson(program.input);
 // if data is ok, run the programm
 if (fn.parseJsonData(data)) {
 
-  console.info('Welcome to the Mars Rover program!');
-  console.info('==================================');
+  console.log('Welcome to the Mars Rover program!');
+  console.log('==================================');
 
   let thePlateau = new Plateau('thePlateau', data.plateau.width, data.plateau.height);
 
@@ -49,7 +49,23 @@ if (fn.parseJsonData(data)) {
 
   // NOW WE CAN MOVE THE ROVERS
   _.each(data.rovers, function (rover, index) {
-    marsRovers[index].runPath();
+
+    if (!global.visualMode) {
+      console.log('');
+      console.log('MOVING ROVER #%s', marsRovers[index].index);
+      console.log('INITIAL POSITION IS = %s %s %s', marsRovers[index].x, marsRovers[index].y, marsRovers[index].o);
+      console.log('');
+    }
+
+    marsRovers[index].runPath(marsRovers[index].path);
+
+    if (!global.visualMode) {
+      console.log('');
+      console.log('DONE MOVING ROVER #%s!', marsRovers[index].index);
+      console.log('FINAL POSITION IS = %s %s %s', marsRovers[index].x, marsRovers[index].y, marsRovers[index].o);
+      console.log('========================================================================');
+    }
+
   });
 
 

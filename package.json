@@ -11,6 +11,7 @@
   "dependencies": {
     "axel": "0.0.3",
     "commander": "^2.14.1",
+    "console-group": "^0.3.3",
     "fs": "0.0.1-security",
     "path": "^0.12.7",
     "sleep": "^5.1.1",
