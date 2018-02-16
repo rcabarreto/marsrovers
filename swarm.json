@@ -9,7 +9,7 @@
     { "start": { "x": 2, "y": 0, "o": "N" }, "path": "LMRMMMMMLMM" },
     { "start": { "x": 3, "y": 0, "o": "N" }, "path": "MMMMMMLMMRM" },
     { "start": { "x": 4, "y": 0, "o": "N" }, "path": "RR" },
-    { "start": { "x": 5, "y": 0, "o": "N" }, "path": "MMMMMMMLMMR" },
+    { "start": { "x": 5, "y": 0, "o": "N" }, "path": "MMLMMRMMMMM" },
     { "start": { "x": 6, "y": 0, "o": "N" }, "path": "LL" },
     { "start": { "x": 7, "y": 0, "o": "N" }, "path": "MR" },
     { "start": { "x": 0, "y": 2, "o": "N" }, "path": "ML" },
