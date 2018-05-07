@@ -70,7 +70,7 @@ if (fn.parseJsonData(data)) {
 
 } else {
   console.log('');
-  console.log('ERROR FOUND ON CONFIGURATION FILE!');
+  console.log('ERROR ON CONFIGURATION FILE!');
   console.log('Please check the input.json file and rerun this program.');
   console.log('');
 }
